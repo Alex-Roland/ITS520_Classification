@@ -1,0 +1,30 @@
+<html>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
+  <script src="index.js"></script>
+  <style>
+    table, th, td { border: 1px solid; }
+    #boxes { display:flex; justify-content:center; }
+    #leftbox { float:left; width:20%; height:200px; }
+    #rightbox { float:left; width:20%; height:200px; }
+    h1 { color:green; text-align:center; }
+  </style>
+</head>
+<body>
+  <h1>ITS520: Classification</h1>
+  <div id="boxes">
+    <div id="leftbox">
+      <h2>Input</h2>
+      <input type="text" id="box0c1" value="72"> Outside Temp<br/>
+      <input type="text" id="box1c1" value="45"> Outside Humidity<br/>
+      <input type="text" id="box2c1" value="70"> Inside Temp<br/>
+      <input type="text" id="box3c1" value="35"> Inside Humidity<br/>
+      <div><input style="background-color:yellow" type="button" value="Run" onclick="runExample()"/></div>
+    </div>
+    <div id="rightbox">
+      <h2>Output</h2>
+      <div id="predictions"></div>
+    </div>
+  </div>
+</body>
+</html>
